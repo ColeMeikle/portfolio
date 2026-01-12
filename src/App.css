@@ -263,6 +263,10 @@ html, body, #root {
   background-image: url('./assets/orbital.jpg');
 }
 
+#lumen-image {
+  background-image: url('./assets/lumen.png');
+}
+
 #nsigram-image {
   background-image: url('./assets/nsigram.png');
 }

@@ -65,6 +65,18 @@ function App() {
           </div>
         </div>
 
+        <div className="project-section" id="lumen">
+          <div className="project-section-inner">
+            <div className="project-image" id="lumen-image">Image</div>
+            <div className="project-content">
+              <h3>Lumen</h3>
+              <p>Developed for Deltahacks 12, Lumen is an AI voice assistant that allows users to use their voice to interact with the web and ask questions about their screen. Users can scroll, zoom, open new tabs, search, click links, ask for help finding something on a page, or help identifying what a page element is.</p>
+              <br></br>
+              <p>I implemented both <strong>Speech-To-Text</strong> and <strong>Text-To-Speech</strong> functionality using Google's webkit and ElevenLabs APIs, integrating Gemini to convert requests to a JSON format that was actionable. The extension was nearly entirely coded using <strong>JavaScript</strong></p>
+            </div>
+          </div>
+        </div>
+
         <div className="project-section" id="nsigram">
           <div className="project-section-inner">
             <div className="project-image" id="nsigram-image">Image</div>
