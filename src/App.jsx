@@ -14,6 +14,7 @@ function App() {
       <nav className="navbar">
         <div className="nav-name">Cole Meikle</div>
         <div className="nav-links">
+          <button onClick={() => scrollToSection('experience')}>Experience</button>
           <button onClick={() => scrollToSection('projects')}>Projects</button>
           <button onClick={() => scrollToSection('skills')}>Skills</button>
           <button onClick={() => scrollToSection('about')}>About</button>
@@ -23,13 +24,47 @@ function App() {
       {/* Hero Section */}
       <section id="hero" className="hero">
         <h1>Cole Meikle</h1>
-        <p className="hero-subtitle">First-year <strong>Software Engineering</strong> student at the <strong>University of Waterloo</strong> with experience building full-stack web apps, database-backed systems, and embedded software. 
+        <p className="hero-subtitle">Second-year <strong>Software Engineering</strong> student at the <strong>University of Waterloo</strong> with recent industry experience as an Associate Software Developer at <strong>AltaML</strong>, building LLM-backed document pipelines and full-stack web systems. 
           <br></br>
-          Seeking a <strong>Spring 2026</strong> internship.
+          Seeking a <strong>Winter 2027</strong> internship.
         </p>
         <div className="hero-links">
           <a href="https://github.com/ColeMeikle" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/cole-meikle-378842372/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section id="experience" className="section">
+        <h2 className="section-header">Experience</h2>
+
+        <div className="experience-item">
+          <h3>Associate Software Developer — AltaML</h3>
+          <p className="experience-time">May 2026 - Aug 2026</p>
+          <ul>
+            <li>Built click-to-source highlighting for LLM-extracted DOCX fields by assigning <strong>positional anchor ids</strong> across a <strong>Python</strong> extractor and <strong>React</strong> previewer, cutting reviewer verification time by over <strong>90%</strong>.</li>
+            <li>Optimized a document-anchoring pipeline using a precomputed comparison field to cut matching from <strong>quadratic</strong> to <strong>linear</strong> time, reducing latency from <strong>1.2s</strong> to <strong>59ms</strong> at scale.</li>
+            <li>Designed and shipped a <strong>prompt-injection defense</strong> for an LLM document-review pipeline, fencing untrusted input with <strong>per-run random delimiters</strong> and flagging instruction-like input on every judged check.</li>
+            <li>Diagnosed and fixed four classes of numeric-display bugs causing reviewers to see conflicting values between the UI and generated reports, raising checklist accuracy from <strong>46%</strong> to <strong>94%</strong>.</li>
+          </ul>
+        </div>
+
+        <div className="experience-item">
+          <h3>Freelance Coding Annotator — DataAnnotation</h3>
+          <p className="experience-time">June 2025 - Present</p>
+          <ul>
+            <li>Contributed to human-in-the-loop learning pipelines to improve large language model (LLM) performance on both coding and conversational benchmarks.</li>
+            <li>Designed test cases and rubrics to evaluate various LLMs' performances on complex tasks.</li>
+          </ul>
+        </div>
+
+        <div className="experience-item">
+          <h3>UW Orbital — Firmware &amp; Ground Station</h3>
+          <p className="experience-time">Sept 2025 - Jan 2026</p>
+          <ul>
+            <li>Contributed to low-level satellite firmware and the ground station backend for a student cubesat, handling requests and transmitting photos.</li>
+            <li>Recreated the project database using <strong>Alembic</strong> and schema files to make schema changes easy and synced across 30+ contributors.</li>
+          </ul>
         </div>
       </section>
 
@@ -53,17 +88,7 @@ function App() {
           </div>
         </div>
 
-        <div className="project-section" id="orbital">
-          <div className="project-section-inner">
-            <div className="project-image" id="orbital-image">Image</div>
-            <div className="project-content">
-              <h3>UW Orbital</h3>
-              <p>UW Orbital is a student design team at the University of Waterloo which designs and builds a cubesat which is capable of orbiting earth, receiving requests from our ground station and transmitting back photos from its camera. </p>
-              <br></br>
-              <p>As a member of both the <strong>firmware</strong> and <strong>Ground Station</strong> teams, I have contributed to both low-level satellite code and the backend of our ground station to handle requests. My most significant contribution thus far has been recreating our database using <strong>Alembic</strong> and files representing the schema to make the database easily modifiable with changes being synced across our 30+ contributors.</p>
-            </div>
-          </div>
-        </div>
+        
 
         <div className="project-section" id="lumen">
           <div className="project-section-inner">
@@ -120,12 +145,13 @@ function App() {
           </ul>
           <h3>Frameworks & Tools</h3>
           <ul className="skills-list">
-            <li>React</li>
-            <li>Spring Boot</li>
             <li>Git</li>
-            <li>Vaadin</li>
-            <li>Flask</li>
+            <li>Docker</li>
+            <li>React</li>
             <li>PostgreSQL</li>
+            <li>Flask</li>
+            <li>Spring Boot</li>
+            <li>Vaadin</li>
           </ul>
         </div>
       </section>
@@ -134,11 +160,11 @@ function App() {
       <section id="about" className="section">
         <h2 className="section-header">About Me!</h2>
         <p className="about-text">
-          Other than being a 1B Software Engineering student at the University of Waterloo, I also enjoy trivia and sports.
+          Other than being a 2A Software Engineering student at the University of Waterloo, I also enjoy trivia and sports.
           <br></br><br></br>
-          You can frequently find me at the <strong>UW Quizbowl</strong> club, competing in trivia tournaments both locally and online. This is a continuation of my high school trivia experience, where I was able to come first in Canada in 2025 in Reach for the Top. I love learning about a wide variety of topics to expand my knowledge, so let me know if you ever need a fun fact!
+          You can frequently find me at the <strong>UW Quizbowl</strong> club, competing in trivia tournaments both locally and online. This is a continuation of my high school trivia experience, where I was able to win the 2025 Reach for the Top national championships. I love learning about a wide variety of topics to expand my knowledge, so let me know if you ever need a fun fact!
           <br></br><br></br>
-          I also love both playing and watching sports. You can find me on the volleyball and squash courts at UW, as well as in the curling rink. I also love racing, especially Formula 1, which led me to modify a 1969 Volvo for racing and serve as its pitcrew at races. There's a good chance I play and follow whatever your favourite sport is, so feel free to talk to me about it. (But my favourite will always be curling)
+          I also love both playing and watching sports. Right now, I'm training for a fall marathon, so I spend a lot of my free time going on nice long runs along the river. You can also find me on the volleyball, squash and pickleball courts at UW. I also love racing, especially Formula 1, which led me to modify a 1969 Volvo for racing and serve as its pitcrew at many races. There's a good chance I play and follow whatever your favourite sport is, so feel free to talk to me about it. (But my favourite will always be curling)
         </p>
       </section>
     </>
